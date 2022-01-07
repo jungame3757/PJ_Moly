@@ -1,4 +1,4 @@
 # PJ_Moly
 made by HexarStudio
 
-Hello Seo Jun by YJK
+Hello Seo Jun by YJK - 1
