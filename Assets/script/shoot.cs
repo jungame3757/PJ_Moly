@@ -6,7 +6,8 @@ public class shoot : MonoBehaviour
 {
     ParticleSystem part;
     Vector2 Mouse_pos;
-    public Camera cam;
+
+     public Camera cam;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,22 +17,30 @@ public class shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //(키보드 조작)
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            part.Play();
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            part.Stop();
+        }
+        
+
+        //(마우스 조작)
+        Vector3 Mouse_pos = cam.ScreenToWorldPoint(Input.mousePosition + new Vector3(0,0,-cam.transform.position.z + 13f)) - transform.position;
+        Debug.Log(Mouse_pos);
+        float z = Mathf.Atan2(Mouse_pos.y, Mouse_pos.x)* Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0,0,z);
+
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("play");
             part.Play();
         }
         if (Input.GetMouseButtonUp(0))
         {
-            Debug.Log("play");
             part.Stop();
         }
-        Mouse_pos = Input.mousePosition;
-        Mouse_pos = cam.WorldToScreenPoint(Mouse_pos);
-        Mouse_pos.x -= transform.position.x;
-        Mouse_pos.y -= transform.position.y;
-        Debug.Log(part.shape.rotation.z);
-        Debug.Log(Mathf.Atan2(Mouse_pos.y, Mouse_pos.x) * Mathf.Rad2Deg);
-        part.shape.rotation.Set(0.0f, 0.0f, Mathf.Atan2(Mouse_pos.y, Mouse_pos.x) * Mathf.Rad2Deg);
     }
 }

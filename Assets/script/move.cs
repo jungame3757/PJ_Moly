@@ -9,19 +9,16 @@ public class move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rig = gameObject.GetComponent<Rigidbody>();
+        rig = GetComponent<Rigidbody>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        float time = Time.deltaTime;
-        if (Input.GetKey(KeyCode.W))
-            rig.AddForce(Vector3.up * speed);
-        if (Input.GetKey(KeyCode.S))
-            rig.AddForce(Vector3.down * speed);
-        if (Input.GetKey(KeyCode.A))
-            rig.AddForce(Vector3.left * speed);
-        if (Input.GetKey(KeyCode.D))
-            rig.AddForce(Vector3.right * speed);
+        float inputX = Input.GetAxis("Horizontal");
+        float inputY = Input.GetAxis("Vertical");
+
+        Vector3 velocity = new Vector3(inputX, inputY, 0.0f);
+        velocity *= speed;
+        rig.velocity = velocity;
     }
 }
