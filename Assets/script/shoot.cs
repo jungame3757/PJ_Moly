@@ -30,7 +30,6 @@ public class shoot : MonoBehaviour
 
         //(마우스 조작)
         Vector3 Mouse_pos = cam.ScreenToWorldPoint(Input.mousePosition + new Vector3(0,0,-cam.transform.position.z + 13f)) - transform.position;
-        Debug.Log(Mouse_pos);
         float z = Mathf.Atan2(Mouse_pos.y, Mouse_pos.x)* Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0,0,z);
 
