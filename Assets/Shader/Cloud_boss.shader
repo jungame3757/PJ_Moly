@@ -10,7 +10,7 @@ Shader "FX/Clouds" {
         _AnimSpeedX("Animation Speed X", Range(-5,5)) = 1
         _AnimSpeedY("Animation Speed Y", Range(-5,5)) = 1
         _AnimSpeedZ("Animation Speed Z", Range(-5,5)) = 1
-        _Height("Noise Height", Range(0,10)) = 0.8
+        _Height("Noise Height", Range(0,2)) = 0.8
         _Strength("Noise Emission Strength", Range(0,2)) = 0.3
     }
 

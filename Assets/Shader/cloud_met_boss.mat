@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: cloud_met
-  m_Shader: {fileID: 4800000, guid: 256cf627e23c74648b1edd47f46ab7b5, type: 3}
+  m_Name: cloud_met_boss
+  m_Shader: {fileID: 4800000, guid: 13a716a3b45096e449e1326ab095d1e7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -60,8 +60,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _AnimSpeedX: 0.5
-    - _AnimSpeedY: 0.5
+    - _AnimSpeedX: 1
+    - _AnimSpeedY: 1
     - _AnimSpeedZ: 1
     - _BumpScale: 1
     - _Cutoff: 0.5
@@ -70,23 +70,23 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Height: 10
+    - _Height: 0.7981153
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RimPower: 3.8
-    - _Scale: 0.0015
+    - _RimPower: 20
+    - _Scale: 0.07
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Strength: 0.47
+    - _Strength: 0.3
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _CloudColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _CloudColor: {r: 1, g: 0.9292453, b: 0.9292453, a: 1}
+    - _Color: {r: 0.60251296, g: 0.60251296, b: 0.60251296, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
-    - _TColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RimColor: {r: 0.504717, g: 0.5178081, b: 1, a: 1}
+    - _TColor: {r: 1, g: 0.9386792, b: 0.9386792, a: 1}
   m_BuildTextureStacks: []

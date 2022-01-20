@@ -9,11 +9,16 @@ public class move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
 
+=======
+        rig = GetComponent<Rigidbody>();
+>>>>>>> 8e96f87382e2739ab517d4f2032bbd2e37e050f7
     }
 
-    void FixedUpdate()
+    void Update()
     {
+<<<<<<< HEAD
         if (Input.GetKey(KeyCode.LeftArrow))
             this.transform.Translate(-0.1f, 0.0f, 0.0f);
 
@@ -34,5 +39,13 @@ public class move : MonoBehaviour
             ps.Play();
         if (Input.GetKeyUp(KeyCode.Space))
             ps.Stop();
+=======
+        float inputX = Input.GetAxis("Horizontal");
+        float inputY = Input.GetAxis("Vertical");
+
+        Vector3 velocity = new Vector3(inputX, inputY, 0.0f);
+        velocity *= speed;
+        rig.velocity = velocity;
+>>>>>>> 8e96f87382e2739ab517d4f2032bbd2e37e050f7
     }
 }
